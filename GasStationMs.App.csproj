@@ -108,6 +108,10 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="GasStationMs.Bll\GasStationMs.Bll.csproj">
+      <Project>{bafec30c-6e78-4d9d-b008-93f3362b492a}</Project>
+      <Name>GasStationMs.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="GasStationMs.Dal\GasStationMs.Dal.csproj">
       <Project>{b44b95bb-6b38-4f66-a554-5072a063815e}</Project>
       <Name>GasStationMs.Dal</Name>
