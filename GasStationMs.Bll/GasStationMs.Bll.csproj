@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GasStationMs.CommonLayer\GasStationMs.CommonLayer.csproj" />
+    <ProjectReference Include="..\GasStationMs.Dal\GasStationMs.Dal.csproj" />
   </ItemGroup>
 
 </Project>

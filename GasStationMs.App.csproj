@@ -34,11 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.6.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
     <Reference Include="SimpleInjector, Version=4.8.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>packages\SimpleInjector.4.8.1\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -111,6 +115,10 @@
     <ProjectReference Include="GasStationMs.Bll\GasStationMs.Bll.csproj">
       <Project>{bafec30c-6e78-4d9d-b008-93f3362b492a}</Project>
       <Name>GasStationMs.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="GasStationMs.CommonLayer\GasStationMs.CommonLayer.csproj">
+      <Project>{44032916-8503-4b2c-9391-f1656a4a4d7f}</Project>
+      <Name>GasStationMs.CommonLayer</Name>
     </ProjectReference>
     <ProjectReference Include="GasStationMs.Dal\GasStationMs.Dal.csproj">
       <Project>{b44b95bb-6b38-4f66-a554-5072a063815e}</Project>

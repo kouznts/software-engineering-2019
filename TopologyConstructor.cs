@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GasStationMs.Bll.Services.Interfaces;
+using GasStationMs.CommonLayer.Dto;
 using GasStationMs.Dal;
 
 namespace GasStationMs.App
@@ -27,6 +28,9 @@ namespace GasStationMs.App
 
             InitializeComponent();
 
+            var x = _db.Fuels;
+            x.ToList();
+
             SetSettings();
         }
 
@@ -41,5 +45,11 @@ namespace GasStationMs.App
             fillingStationField.RowCount = (int)cellsVertically.Value;
         }
         #endregion
+
+        private void ButtonTest_ClickAsync(object sender, EventArgs e)
+        {
+            //_db.Fuels.FirstOrDefault(f => f.Id == 1);
+            //FuelDto fuelDto = _fuelService.GetFuelByIdAsync(1);
+        }
     }
 }

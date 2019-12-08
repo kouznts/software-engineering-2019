@@ -40,5 +40,10 @@ namespace GasStationMs.Dal
                 CarPreset.GetPresetCars()
             );
         }
+
+        public string Hello()
+        {
+            return "Hello";
+        }
     }
 }

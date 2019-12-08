@@ -5,4 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="4.8.1" />
+  </ItemGroup>
+
 </Project>
