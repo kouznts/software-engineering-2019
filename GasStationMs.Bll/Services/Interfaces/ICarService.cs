@@ -3,7 +3,7 @@ using GasStationMs.CommonLayer.Dto;
 
 namespace GasStationMs.Bll.Services.Interfaces
 {
-    interface ICarService
+    public interface ICarService
     {
         //The external contract consists only of GetAllCars method
         //the other methods are not required for the program logic

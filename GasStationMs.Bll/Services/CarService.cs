@@ -6,7 +6,7 @@ using GasStationMs.CommonLayer.Dto;
 
 namespace GasStationMs.Bll.Services
 {
-    class CarService : ICarService
+    public class CarService : ICarService
     {
         public IEnumerable<CarDto> GetAllCars()
         {

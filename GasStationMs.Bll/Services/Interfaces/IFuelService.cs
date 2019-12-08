@@ -4,7 +4,7 @@ using  GasStationMs.CommonLayer.Dto;
 
 namespace GasStationMs.Bll.Services.Interfaces
 {
-    interface IFuelService
+    public interface IFuelService
     {
         IEnumerable<FuelDto> GetAllFuels();
         Task<FuelDto> GetFuelByIdAsync(int fuelId);

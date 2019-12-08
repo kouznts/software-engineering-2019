@@ -7,17 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GasStationMs.Bll.Services.Interfaces;
 using GasStationMs.Dal;
 
 namespace GasStationMs.App
 {
     public partial class TopologyConstructor : Form
     {
-        private GasStationContext _gasStationContext;
+        private readonly GasStationContext _db;
+        private readonly IFuelService _fuelService;
+        private readonly ICarService _carService;
 
-        public TopologyConstructor(GasStationContext gasStationContext)
+        public TopologyConstructor(GasStationContext gasStationContext, IFuelService fuelService,
+            ICarService carService)
         {
-            _gasStationContext = gasStationContext;
+            _db = gasStationContext;
+            _fuelService = fuelService;
+            _carService = carService;
 
             InitializeComponent();
 

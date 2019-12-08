@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using GasStationMs.Dal;
+using GasStationMs.Bll.Services;
+using GasStationMs.Bll.Services.Interfaces;
 using SimpleInjector;
 
 namespace GasStationMs.App
@@ -28,7 +30,8 @@ namespace GasStationMs.App
 
             // Register your types, for instance:
             container.Register<GasStationContext>(Lifestyle.Singleton);
-            //container.Register<IUserContext, WinFormsUserContext>();
+            container.Register<IFuelService, FuelService>();
+            container.Register<ICarService, CarService>();
             container.Register<TopologyConstructor>(/*Lifestyle.Scoped*/);
 
             // Optionally verify the container.
