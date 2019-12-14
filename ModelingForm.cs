@@ -966,6 +966,7 @@ namespace GasStationMs.App
             car.Location = _spawnPoint;
             car.SizeMode = PictureBoxSizeMode.AutoSize;
 
+            carView.CreateSafeArea(car, _carSpeedFilling);
             this.Controls.Add(car);
             car.BringToFront();
 
