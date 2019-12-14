@@ -24,6 +24,8 @@ namespace GasStationMs.App.Modeling.Models
         public bool IsBypassingObject { get; set; }
         public PictureBox ChosenFuelDispenser { get; set; }
 
+        public PictureBox SafeArea { get; set; }
+
         private List<Point> _destinationPoints;
         public PictureBox DestinationSpot;
 
@@ -89,6 +91,18 @@ namespace GasStationMs.App.Modeling.Models
         public bool HasDestPoints()
         {
             return _destinationPoints.Count > 0;
+        }
+
+        public void CreateSafeArea(PictureBox car, int carSpeed)
+        {
+            var safeAreaSizeX = car.Width + 2 * carSpeed;
+            var safeAreaSizeY = car.Height + 2 * carSpeed;
+            SafeArea = new PictureBox();
+            SafeArea.Tag = "Safe area of car " + Id;
+            SafeArea.BackColor = Color.Azure;;
+            SafeArea.Left = car.Left - carSpeed;
+            SafeArea.Top = car.Top - carSpeed;
+            SafeArea.Size = new Size(safeAreaSizeX, safeAreaSizeY);
         }
     }
 }
